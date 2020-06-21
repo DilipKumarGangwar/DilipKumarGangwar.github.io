@@ -1,0 +1,73 @@
+<!--   constructor function-->
+<html>
+<head>
+  <title>Hello </title>
+     <script type="text/javascript">
+        //  var car= {
+
+        //     car_brand : "tesla",
+        //     car_model : "model 3",
+        //     price : 400,
+         
+
+        //      tesla : function()
+        //     {
+        //         document.write("hello");
+        //       //  document.write(a+b);
+        //       document.write(car_brand);
+
+        //     } 
+
+            
+
+        //  };
+
+        //  var x= car;
+       
+        //  car.tesla();
+        //  x.car_brand="kl"
+        //  car.tesla();
+         
+         function Cars(br,md,pr)
+        {
+            this.car_brand=br;
+            this.car_model=md;
+            this.price=pr;
+            this.tesla = function()
+            {
+                document.write("Printed"+"<br>");
+            }
+
+        }
+
+
+        var c1=new Cars("tesla","3",900);
+        c1.tesla()
+        
+        document.write("Car Model="+ c1.car_model);
+        var c2=new Cars("tesla","4",8900);
+        c2.tesla() 
+        
+       
+        document.write("New Car model = "+c2.car_model);
+     
+
+        // var str=new String();
+        // var str2="hj";
+        // document.write(typeof(str));
+        // document.write(typeof(str2));
+
+
+
+     </script>
+
+ 
+</head>
+
+<body>
+ 
+
+</body>
+
+
+</html>

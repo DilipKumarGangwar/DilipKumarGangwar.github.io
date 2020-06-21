@@ -1,0 +1,33 @@
+<!-- Select a option from Select box and show  alert whichever option is selected-->
+
+<html>
+<head>
+  <title>Hello </title>
+     <script type="text/javascript">
+      function buttonClick()
+      {
+         var select=document.getElementById("selectbox");
+         alert(select.options[select.selectedIndex].value)
+      }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    <Select id="selectbox">
+      <option value="Java Language">Java</option>
+      <option value="Javascript Language">Javascript</option>
+      <option value="HTML">HTML</option>
+
+    </Select>
+    <button onclick="buttonClick()">Click me</button>
+    
+
+</body>
+
+
+</html>

@@ -1,0 +1,49 @@
+<!--Use of GetElemntByClassName() -->
+
+
+<html>
+<head>
+  <title>Hello </title>
+     <script type="text/javascript">
+      function ChangeStyle()
+      {
+         var element = document.getElementsByClassName("mypara ");
+         //manipulation
+
+         for(var i=0;i<element.length;i++)
+         
+             element[i].style.color="red";
+         
+        }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    <p id ="p1" class="mypara">This Para1  </p> 
+   
+   <p>This Para 2</p>
+
+   <p  class="mypara">This Para3  </p>
+   <p>This Para 4</p>
+
+   <p class="mypara">This Para5 </p>
+   <a class="mypara" href="#"> This is Anchor Tag</a>
+   <br>
+   <button onclick="ChangeStyle()">Click Me</button>
+
+ 
+
+   
+
+    <button onclick="ChangeStyle()">Click me</button>
+    
+
+</body>
+
+
+</html>

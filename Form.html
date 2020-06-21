@@ -1,0 +1,34 @@
+<!-- Enter Username and Password if they are same , then on Button click show a message that Username and pssword are same else print not same in alert-->
+<html>
+<head>
+  <title>DOM Manipulations </title>
+     <script type="text/javascript">
+      function buttonClick()
+      {
+          
+         
+          
+          var username= document.getElementById("username").value;
+          var password= document.getElementById("password").value;
+          if(username == password)
+            alert("Username and password matches");
+          else
+            alert("Username and password do not matches")  
+      }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    <input  type= "text" id="username" placeholder="Username">
+    <input type ="password" id="password" placeholder="Password">
+    <input type ="button" value="click" onclick="buttonClick()">
+
+</body>
+
+
+</html>

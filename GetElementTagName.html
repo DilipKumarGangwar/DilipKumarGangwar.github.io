@@ -1,0 +1,41 @@
+<!--Use of GetElemntByTagName , change CSS style of all paragraph at once -->
+
+
+<html>
+<head>
+  <title>Hello </title>
+     <script type="text/javascript">
+      function ChangeStyle()
+      {
+         var para = document.getElementsByTagName("p");
+         para[0].style .fontSize = 25;  //change font size of para 0
+         para[1].style .color = "red";  //change color of para1
+         para[2].style .fontWeight = "bold";  //change fontWeight of para2
+         //para[3].style .fontStyle = "italic";  //change font Style of para3
+         para[3].style.backgroundColor = "blue";  
+        
+        }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+   <p>This Para 1</p>
+   <p>This Para 2</p>
+   <p>This Para 3</p>
+   <p>This Para 4</p>
+   <br>
+
+   
+
+    <button onclick="ChangeStyle()">Click me</button>
+    
+
+</body>
+
+
+</html>
