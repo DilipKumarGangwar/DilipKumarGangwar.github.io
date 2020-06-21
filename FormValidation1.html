@@ -1,0 +1,40 @@
+<!--Form Validation, Show error message if username or password is blank else show "Welcome"-->
+
+<html>
+<head>
+  <title>DOM Manipulations </title>
+     <script type="text/javascript">
+      function validate()
+      {
+          var username= document.getElementById("username").value;
+          var password= document.getElementById("password").value;
+          if(username.trim() == "" || password.trim()== "")
+          {
+             alert("No Black Values are allowed");
+              return false;
+          }
+          else
+           {
+              return true;
+            }  
+      }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    <form onsubmit=" return validate()" action="Welcome.html">
+    <input  type= "text" id="username" placeholder="Username"></br>
+    <input type ="password" id="password" placeholder="Password"></br>
+    </br>
+    <!--<button  onclick="validate()" type="submit" > Submit </button> -->
+    <button type="submit" > Submit </button>
+    </form>
+</body>
+
+
+</html>

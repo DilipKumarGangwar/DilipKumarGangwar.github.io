@@ -1,0 +1,35 @@
+<!-- OnMouseOver() OnMouseOut  , Hover on image and change to other imgage and on hover out, change to default image-->
+
+<html>
+<head>
+  <title>DOM Manipulations </title>
+     <script type="text/javascript">
+      
+      function setNewImage()
+      {
+         document.getElementById("img1").src = "images/flower.png"
+
+      }
+
+      function setOldImage()
+      {
+
+        document.getElementById("img1").src = "images/great_image.png"
+
+      }
+      
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    <!--<img src="great_image.png" width ="300"/> -->
+    <img id = "img1" onmouseover="setNewImage()" onmouseout="setOldImage()"   src="images/great_image.png" width ="300"/>
+</body>
+
+
+</html>
