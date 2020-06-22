@@ -1,0 +1,49 @@
+<!--  Create a Timer
+On clicking start, timer starts and the printMsg() function is exceuted after every 1 seconds as shown in setInterval()
+We can pause or stop the timer before 4 second if we want in between and start gain also by clicking or start
+-->
+
+<html>
+<head>
+  <title>Timing </title>
+     <script type="text/javascript">
+     
+     var ID=0  
+     var seconds=0     //global variables
+     function printMsg()
+     {
+         document.getElementById("text").innerHTML = seconds + " Seconds";
+         seconds++;
+         
+        }
+
+      function start()
+      {
+          //setInterval(reference of function to all, after how much millisec want to call)
+         ID = window.setInterval(printMsg,1000)
+      }   
+
+      function stop()
+      {
+          // clearTimeout()
+          
+          window.clearInterval(ID)
+      }
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    
+   <button id ="start" onclick="start()" >Start </button> 
+   <h2 id="text" >Hello, Click the start button to start timer </h2>
+   <button id ="stop" onclick="stop()">Pause orStop </button> 
+
+</body>
+
+
+</html>

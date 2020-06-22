@@ -1,0 +1,43 @@
+<!--   Add 2 numbers , By Default the numbers are in strings, so conevert into numbers properly otherwise concatenation of those numbers will happen-->
+
+<html>
+<head>
+  <title>Add </title>
+     <script type="text/javascript">
+      function addValues()
+      {
+          
+         
+          
+          var x= document.getElementById("text1").value;
+          var y= document.getElementById("text2").value;
+         //var ans=+x + +y;    //works
+          //var ans= Number(x) + Number(y); //works
+          var ans= parseInt(x,10) + parseInt(y,10); //works
+          document.getElementById("result").innerHTML="Result="+ans;
+          console.log(ans)   
+         
+      }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+   Enter 1st no. <input  id="text1" placeholder="Number 1">
+</br>
+   Enter 2nd no. <input  id="text2" placeholder="Number 2">
+</br></br>
+ 
+
+
+<input type ="button" value="Add" style="margin-left: 10%""  onclick="addValues()">
+   <!--<input type ="button" value="Add" style="width: 50px; margin: 0 auto;"  onclick="addValues()"> -->
+   <h1 id="result">Result=</h1>
+</body>
+
+
+</html>

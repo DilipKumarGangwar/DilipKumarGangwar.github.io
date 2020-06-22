@@ -1,0 +1,52 @@
+<!-- Mobile No Validation, Assumptio: First digit should be b/w 7 to 9-->
+
+<html>
+<head>
+  <title>Mobile No Validation</title>
+     <script type="text/javascript">
+      function validate()
+      {
+          //document.write("he");
+          var number= document.getElementById("mobileno");
+          
+          //var regex = /^[7-9][0-9]{9}$/;
+          var regex = /^[7-9]\d{9}$/;
+          //var regex = /[^a-x]imple/i;   //exclude character from a to x in starting
+          if(regex.test(number.value))
+          {
+              
+            document.getElementById("lab1").innerHTML="Valid";
+            document.getElementById("lab1").style.visibility="visible";
+            document.getElementById("lab1").style.color="green";
+             
+          }
+          else
+           {
+            number.style.border="solid 3px red"    
+            document.getElementById("lab1").innerHTML="InValid";
+            document.getElementById("lab1").style.visibility="visible";
+            document.getElementById("lab1").style.color="red";
+             
+        }
+
+      }   
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    <form >
+    Enter Mobile No: <input  type= "text" id="mobileno" placeholder="Mobile">
+    <label id="lab1" style = "color:red; visibility: hidden;">Invalid Mobile No</label> 
+     </br>
+    
+    <button onclick="validate()" type="button"  > Submit </button>
+   </form>
+</body>
+
+
+</html>
