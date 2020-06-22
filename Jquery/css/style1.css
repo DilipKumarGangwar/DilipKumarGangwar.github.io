@@ -1,0 +1,11 @@
+.mydiv{
+    border: 2px solid blue;
+    margin: 5 px;
+    padding: 10px
+
+}
+
+div p{   /* apply to all paragraphs inside div   */
+
+    color:red;
+}

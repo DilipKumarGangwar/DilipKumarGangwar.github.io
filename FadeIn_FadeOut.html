@@ -1,0 +1,80 @@
+<!--  Fade In Fade Out-->
+
+<html>
+<head>
+  <title>Fade In Fade Out </title>
+     <script type="text/javascript">
+     
+     var ID=0  
+     var opacity=0     //global variables
+     function hide()
+     {
+         var img = document.getElementById("img1");
+         //get the opacity of image
+         opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+         
+         console.log(opacity)       //to see values on console
+         if(opacity>0)
+         {
+            opacity=opacity -0.1;
+            img.style.opacity = opacity ;   //set the opacity
+            
+         }
+         else
+         {
+            clearInterval(ID); //clear/close the inetreval
+         }
+         
+        }
+
+        function show()
+        {
+         var img = document.getElementById("img1");
+         //get the opacity of image
+         opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+         console.log(opacity)       //to see values on console
+
+         if(opacity<1)
+         {
+            opacity=opacity + 0.1;
+            img.style.opacity = opacity ;   //set the opacity
+           
+         }
+         else
+         {
+            clearInterval(ID); //clear/close the inetreval
+         }
+         
+        }
+
+        
+      function fadeIn()
+      {
+          //setInterval(reference of function to all, after how much millisec want to call)
+         ID = window.setInterval(hide,200)
+      }   
+
+      function fadeOut()
+      {
+          // clearTimeout()
+          
+          ID = window.setInterval(show,200)
+      }
+
+      
+
+     </script>
+
+
+</head>
+
+<body>
+    
+   <button id ="fadein" onclick="fadeIn()" >Fade In </button> </br>
+   <img id="img1" src="images/flower.png" width="100px" height="100px" /></br>
+   <button id ="fadeout" onclick="fadeOut()"> Fade Out </button> 
+
+</body>
+
+
+</html>
