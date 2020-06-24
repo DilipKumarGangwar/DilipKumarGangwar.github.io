@@ -1,0 +1,75 @@
+<!-- Callback and Chaining-->
+
+ 
+ <html>
+    <head>
+      <title>Jquery </title>
+      <!-- Let's add a CSS stylesheet for selector 3-->  
+      <link rel="stylesheet" href="../css/style1.css">
+      
+    
+    </head>
+    
+    <body>
+           
+        <button id="btn1" >Callback</button>
+        <button id="btn2" >Chaining</button>
+        
+          <div id="div1" class="mydiv">
+            <p>Div 1 </p>
+            <p>This is paragraph 1 in div 1 </p>
+            <p>This is paragraph 2 in div 1</p>
+        </div>
+
+        <div id="div2" class="mydiv">
+            <p>Div 2 </p>
+            <p>This is paragraph 1 in div 2 </p>
+            <p>This is paragraph 2 in div 2</p>
+            
+        </div>
+
+        
+
+        
+      
+       </body>
+        <script src="../Jquery_Library/jquery.js">  </script>
+        <script>
+
+            
+
+           $(document).ready(function(){  //call ready when whole HTML page is loaded
+
+            function fn1()
+            {
+                    alert("Fade done");
+            }
+
+
+            $("#btn1").click(function(){
+
+                // $("#div1").toggle(3000); 
+                // alert("Fade done");
+
+                $("#div1").toggle(3000,fn1);                //callback
+               
+
+
+            });
+
+            $("#btn2").click(function(){
+
+                $("#div2").slideUp(2000).slideDown(2000).fadeOut(2000).fadeIn(2000); //chaining
+
+            });
+
+               
+                   
+           });
+            
+           
+
+         
+       
+       </script>
+    </html>
