@@ -25,6 +25,8 @@ css() - get css property of a text on HTML tag/element
         <button id="btn4" >Set HTML text</button>
         <button id="btn5" >Get attribute value</button>
         <button id="btn6" >Get css property value text</button>
+        <button id="btn7" >Set attribute value</button>
+        <button id="btn8" >Set css property value text</button>
         
           <div id="div1" class="mydiv">
            
@@ -84,8 +86,20 @@ css() - get css property of a text on HTML tag/element
             $("#btn6").click(function(){
 
               // alert($("#div1").css("color"));
-             // alert($("#div1").css("font-family"));
-             alert($("#div1").css("border"));
+              alert($("#para").css("font-size"));
+             //alert($("#div1").css("border"));
+            });
+
+            $("#btn7").click(function(){
+
+                $("#para").attr("class","newclassname");
+            
+            });
+
+            $("#btn8").click(function(){
+
+                
+                $("#para").css("font-size","25px");
             });
 
                

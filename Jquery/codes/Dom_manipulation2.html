@@ -1,0 +1,97 @@
+<!-- Dom Elelment Manipulation 
+
+append()- inserts specified content at the end of the selected elements.
+prepend() - inserts specified content at the beginning of the selected elements
+after() -  inserts specified content after the selected elements.
+before() -  inserts specified content before the selected elements.
+-->
+
+ 
+<html>
+    <head>
+      <title>Jquery </title>
+      <!-- Let's add a CSS stylesheet for selector 3-->  
+      <link rel="stylesheet" href="../css/style1.css">
+      
+    
+    </head>
+    
+    <body>
+        <h1> Jquery Dom Manipulation</h1>   
+        <button id="btn1" >Append</button>
+        <button id="btn2" >Prepend</button>
+        <button id="btn3" >After</button>
+        <button id="btn4" >Before</button>
+        <button id="btn5" >Remove </button>
+        <button id="btn6" >Empty</button>
+        <br/>
+        
+          <div id="div1" class="mydiv">
+           
+            <p id ="para" class="mypara">This is <b>good</b> book. You should <i>read</i> it.</b></p>
+            
+        </div>
+
+       </body>
+        <script src="../Jquery_Library/jquery.js">  </script>
+        <script>
+
+            
+
+           $(document).ready(function(){  //call ready when whole HTML page is loaded
+
+            
+
+
+            $("#btn1").click(function(){
+
+                 $("#div1").append("<p>Hello <b> World</b></p>");
+                              
+
+
+            });
+
+            $("#btn2").click(function(){
+
+                $("#div1").prepend ("<p>Ok <b> I am going</b></p>");
+                             
+
+
+            });
+
+            $("#btn3").click(function(){
+
+                $("#div1").after ("<p>Ok <b> After</b></p>");               
+
+
+            });
+
+            $("#btn4").click(function(){
+
+                $("#div1").before("Ok <b>before</b> ");
+                            
+            });
+
+            $("#btn5").click(function(){
+
+                $("#div1").remove();            
+            });
+            
+            $("#btn6").click(function(){
+
+               $("#div1").empty();     
+            });
+            
+
+           
+
+               
+                   
+           });
+            
+           
+
+         
+       
+       </script>
+    </html>

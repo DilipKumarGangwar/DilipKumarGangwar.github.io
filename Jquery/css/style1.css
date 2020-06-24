@@ -1,11 +1,18 @@
-.mydiv{
+.mydiv1{
     border: 2px solid blue;
     margin: 5 px;
     padding: 10px
 
 }
 
-div p{   /* apply to all paragraphs inside div   */
+.newdivclass{
+    border-radius:  10px;
+    background-color: bisque;
 
-    color:red;
+
+}
+
+.newparaclass{
+font-size: 25px;
+
 }
