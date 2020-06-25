@@ -1,0 +1,92 @@
+<!-- Dom Elelment Manipulation 
+addclass()- adds one or more class names to the selected elements.
+removeClass()- remove one or more class names to the selected elements.
+toggleClass() - toggles between adding and removing one or more class names from the selected elements.
+
+-->
+
+ 
+<html>
+    <head>
+      <title>Jquery </title>
+      <!-- Let's add a CSS stylesheet for selector 3-->  
+      <link rel="stylesheet" href="css/style1.css">
+      
+    
+    </head>
+    
+    <body>
+        <h1> Jquery Dom Manipulation</h1>   
+        <button id="btn1" >Add Class</button>
+        <button id="btn2" >Remove Class</button>
+        <button id="btn3" >Toggle Class</button>
+        <button id="btn4" >Add multiple  Class</button>
+        <button id="btn5" >Remove multiple  Class</button>
+       
+        <br/>
+        
+          <div id="div1" class="mydiv1">
+           
+            <p id ="para1" class="mypara1">This is <b>good</b> book. You should <i>read</i> it.</b></p>
+            
+        </div>
+        <div id="div2" class="mydiv2">
+           
+            <p id ="para2" class="mypara2">This is <b>good</b> book. You should <i>read</i> it.</b></p>
+            
+        </div>
+
+       </body>
+        <script src="Jquery_Library/jquery.js">  </script>
+        <script>
+
+            
+
+           $(document).ready(function(){  //call ready when whole HTML page is loaded
+
+            
+
+
+            $("#btn1").click(function(){
+
+                 $("#div1").addClass("newdivclass");
+                              
+
+
+            });
+
+            $("#btn2").click(function(){
+
+                $("#div1").removeClass("newdivclass");          
+
+
+            });
+
+            $("#btn3").click(function(){
+
+                $("#div1").toggleClass("newdivclass");
+
+            });
+
+            $("#btn4").click(function(){
+
+                $("#div1").addClass("newdivclass newparaclass");
+
+            });
+            
+            $("#btn5").click(function(){
+
+                $("#div1").removeClass("newdivclass newparaclass");
+
+            });
+
+          
+                   
+           });
+            
+           
+
+         
+       
+       </script>
+    </html>

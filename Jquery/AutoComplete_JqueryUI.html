@@ -1,0 +1,36 @@
+<html>
+  <head>
+      <title>MessageBox-Jquery UI</title>
+      <link rel="stylesheet"  href="styleDate.css">
+      <link rel="stylesheet"  href="jqueryui/jquery-ui.css">
+      <link rel="stylesheet"  href="jqueryui/jquery-ui.structure.css">
+      <link rel="stylesheet"  href="jqueryui/jquery-ui.theme.css">
+  </head>
+  <body>
+    <h1>AutoComplete Widget - Jquery UI</h1>  
+    <div id="mydiv">
+     Your Current City <input type="text" id="city" >
+
+    </div>
+
+  </body>
+
+  <script src="Jquery_Library/jquery.js" type="text/javascript"></script>
+  <script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+  <script>
+     var cities=["Mumabi","hyderabad","Bangalore","Noida","Pune","New York","Tokyo","London","Los angeles","Dehradun","Delhi"]; // we can fetch this vai some API
+     
+     $("#city").autocomplete({
+         source: cities
+        },
+        {
+            autoFocus:true,     //Focus the selection
+            minLength:2         //min length of city character to type for match to be visible
+         });
+
+  </script>
+</html>
+
+
+

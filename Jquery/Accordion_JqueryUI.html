@@ -1,0 +1,48 @@
+<html>
+  <head>
+      <title>Accordion-Jquery UI</title>
+      <link rel="stylesheet"  href="css/styleDate.css">
+      <link rel="stylesheet"  href="jqueryui/jquery-ui.css">
+      <link rel="stylesheet"  href="jqueryui/jquery-ui.structure.css">
+      <link rel="stylesheet"  href="jqueryui/jquery-ui.theme.css">
+  </head>
+  <body>
+       <div id="mydiv">
+           <h2>Understanding ToolTip in Jquery UI</h2>
+           <p> Tooltips can be attached to any element. When you
+             hover the element with your mouse, the title attribute is displayed in a 
+             little box next to the element, just like a native tooltip. 
+             Tooltips can be attached to any element. When you
+             hover the element with your mouse, the title attribute is displayed in a 
+             little box next to the element element, just like a native tooltip.  </p>
+      
+            <h2> Accordion  </h2>
+            <p>Displays collapsible content panels for presenting information 
+                in a limited amount of space</p>
+              
+            <h2> Dialog</h2>    
+            <p>This is the default dialog which is useful for displaying information. The dialog window can be moved,
+                 resized and closed with the 'x' icon. </p>
+        </div>
+
+  </body>
+
+  <script src="Jquery_Library/jquery.js" type="text/javascript"></script>
+  <script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+  <script>
+     //$("#mydiv").accordion();
+
+     $("#mydiv").accordion({
+         active:1,           //default open section is 1th
+         collapsible: true,
+         heightStyle:true,     //adjust space according to their contents
+         //event:"mouseover",
+         icon:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+     });
+      
+  </script>
+</html>
+
+
+

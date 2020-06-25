@@ -1,0 +1,93 @@
+<!-- Amimate a cube and rectangle. Move Cube to legft and add some css for it
+For Cube, use css atrribute position as absolute and for rectangle make it as default(relative) -->
+ 
+ <html>
+    <head>
+      <title>Jquery </title>
+      <!-- Let's add a CSS stylesheet for selector 3-->  
+      <link rel="stylesheet" href="css/styleCube.css">
+      
+    
+    </head>
+    
+        <body>
+          
+            <button id="btn1" >Click To move Cube</button>
+           
+            
+            <button id="btn2" >Click To move Rectangle</button>
+            <p> Note: Check the position in css file for both</p>
+          
+            <br/> <br/><br/><br/>
+              <div id =cube>
+                <p>Cube</p>
+            </div>
+           
+            <br/> <br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/>
+
+            <div id =rectangle>
+                <p>Rectangle</p>
+            </div>
+
+           
+            
+
+
+            
+        
+      
+       </body>
+       <script src="Jquery_Library/jquery.js">  </script>
+       <script>
+
+            // $("#btn1").click(func1);
+            // function func1()
+            // {
+        
+            // $("div").fadeToggle(); 
+            // } 
+
+            //or BELOW CODE ALSO WORKS(for btn1)
+           
+            $(document).ready(function(){  //call ready when whole HTML page is loaded
+
+                $("#btn1").click(function(){
+
+                    $("#cube").animate({                     //animate({css properties to change},time in ms, callback) , last 2 arg are optional
+                        left:"150px",
+                        width:"150px",
+                        height:"150px",
+                        opacity:1
+                       
+                    
+
+                             
+
+                        },3000);
+                    }); 
+                   
+                $("#btn2").click(function(){
+
+                        $("#rectangle").animate({                     //animate({css properties to change},time in ms, callback) , last 2 arg are optional
+                            left:"150px",
+                            width:"300px",
+                            height:"150px",
+                            opacity:1
+                        
+
+
+                                
+
+                        },3000);       
+                });
+
+                
+                    
+            });
+                            
+           
+
+         
+       
+       </script>
+    </html>

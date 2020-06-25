@@ -1,0 +1,123 @@
+<!-- Jquery Selectors use, Fade In Fade Out
+jQuery selectors allow you to select and manipulate HTML element(s).
+
+jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.
+
+All selectors in jQuery start with the dollar sign and parentheses: $().
+ etc. Based on custom selectors and CSS selectors-->
+
+ 
+ <html>
+    <head>
+      <title>Jquery </title>
+      <!-- Let's add a CSS stylesheet for selector 3-->  
+      <link rel="stylesheet" href="css/style1.css">
+      
+    
+    </head>
+    
+    <body>
+        <h2  > Selector 1 </h2>
+        <p  > This para is outside Divison </h2>
+         <div id="div1" class="mydiv">
+            <p>Div 1 </p>
+            <p>This is paragraph 1 in div 1 </p>
+            <p>This is paragraph 2 in div 1</p>
+        </div>
+
+        <div id="div2" class="mydiv">
+            <p>Div 2 </p>
+            <p>This is paragraph 1 in div 2 </p>
+            <p>This is paragraph 2 in div 2</p>
+            <ol>
+                <li> Sofa  </li>
+                <li> TV  </li>
+                
+
+            </ol>
+        </div>
+
+        <div id="div3" class="mydiv">
+            <p>Div 3 </p>
+            <ul>
+                
+                <li> Coffee  </li>
+                <li> Tea  </li>
+                <li> Water  </li>
+
+            </ul>
+        </div>
+
+        <div id="div4" >
+            <ol>
+                <li> Sofa  </li>
+                <li> TV  </li>
+                
+
+            </ol>
+        </div>
+        <h5 id="text6">Selector 6</h6>
+        <button id="btn1" onclick="func1()">Click To Fade in/out all div</button>
+        <button id="btn2" onclick="func2()">Click to Fade in/out All para inside all div</button>
+        <button id="btn3" onclick="func3()">Click to Fade in/out all div with unordered list in it</button> 
+        <button id="btn4" onclick="func4()">Click to Fade in/out all div with ordered list in it</button> 
+        <button id="btn5" onclick="func5()">Click to Fade in/out div 1 and div 2</button> 
+        <button id="btn6" onclick="func6()">Click to Fade first div, all para , list of div 3</button> 
+        <button id="btn7" onclick="func7()">Click to Fade divs at even no</button> 
+        <button id="btn8" onclick="func8()">Click to Fade lists at even no</button> 
+        <button id="btn9" onclick="func9()">Click to Fade first instance of para</button>
+        
+       </body>
+        <script src="Jquery_Library/jquery.js">  </script>
+        <script>
+        function func1()
+        {
+      
+         $("div").fadeToggle(); 
+        } 
+        function func2()
+        {
+      
+         $("div p").fadeToggle(); 
+        } 
+    
+        function func3()
+        {
+      
+         $("div ul").fadeToggle();  
+        } 
+        function func4()
+        {
+      
+         $("div ol").fadeToggle(); 
+        } 
+    
+        function func5()
+        {
+      
+            $("#div1,#div2").fadeToggle(); 
+        } 
+
+        function func6()
+        {
+      
+            $("#div1,p,ul").fadeToggle();  //fade first div, all para , list of div 3
+        } 
+        function func7()
+        {
+      
+            $(".mydiv:even").fadeToggle();  //fade divs at even no
+        } 
+        function func8()
+        {
+      
+            $("li:even").fadeToggle();  //fade list elements at even place
+        } 
+        function func9()
+        {
+      
+            $("p:first").fadeToggle();  //fade first instance of para
+        } 
+       
+    </script>
+    </html>
